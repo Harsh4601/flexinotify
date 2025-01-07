@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <queries>
+        <!-- Include any apps that your app needs to query -->
+        <package android:name="com.whatsapp" />
+        <package android:name="com.facebook.katana" />
+
+        <package android:name="com.netflix.mediaclient" /> <!-- Netflix -->
+        <package android:name="com.instagram.android" /> <!-- Instagram -->
+        <package android:name="com.twitter.android" /> <!-- Twitter -->
+        <package android:name="com.facebook.katana" /> <!-- Facebook -->
+        <package android:name="com.snapchat.android" /> <!-- Snapchat -->
+        <package android:name="com.whatsapp" /> <!-- WhatsApp -->
+        <package android:name="com.microsoft.teams" /> <!-- Microsoft Teams -->
+        <package android:name="com.skype.raider" /> <!-- Skype -->
+        <package android:name="com.linkedin.android" /> <!-- LinkedIn -->
+        <package android:name="com.reddit.frontpage" /> <!-- Reddit -->
+        <package android:name="com.discord" /> <!-- Discord -->
+        <package android:name="com.twitch" /> <!-- Twitch -->
+        <package android:name="com.netflix.mediaclient" /> <!-- Netflix -->
+        <package android:name="com.amazon.avod.thirdpartyclient" /> <!-- Amazon Prime Video -->
+        <package android:name="com.bbm" /> <!-- BlackBerry Messenger -->
+        <package android:name="com.microsoft.office.outlook" /> <!-- Microsoft Outlook -->
+        <package android:name="com.google.android.youtube" /> <!-- YouTube -->
+        <package android:name="com.google.android.apps.docs" /> <!-- Google Drive -->
+        <package android:name="com.dropbox.android" /> <!-- Dropbox -->
+        <package android:name="com.google.android.apps.tachyon" /> <!-- Google Duo -->
+
+
+        <!-- Add other apps as needed -->
+    </queries>
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ActivityData"
+        tools:targetApi="31">
+        <activity
+            android:name="com.flexinotify.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.flexinotify.AppRestrictionAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+    </application>
+
+</manifest>

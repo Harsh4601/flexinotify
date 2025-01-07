@@ -1,0 +1,9 @@
+{
+  "installed": {
+    "client_id": "166801992757-09l8p7bucffsc5h8301hj7v4tgpj9ddo.apps.googleusercontent.com",
+    "project_id": "stellar-perigee-255504",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs"
+  }
+}
